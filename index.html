@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <header class="navegacao">
+        <nav class="navegacao_menu"> 
+            <a href="index.html" class="navegacao_menu_link">Home</a>
+            <a href="experiencia.html" class="navegacao_menu_link">Experiência</a>
+            <a href="contato.html" class="navegacao_menu_link">Contato</a> 
+
+            <div class="menu_mobile_icone"> 
+                <button onclick="menuShow()"><img class="icon" src="assets/icons8-cardápio-35.png"></button>
+            </div>
+        </nav> 
+    </header>
+
+    <main class="conteudo"> 
+        <section class="conteudo_apresentacao"> 
+            <h1 class="conteudo_apresentacao_titulo">Sobre Mim</h1> 
+            <p class="conteudo_apresentacao_texto">Meu nome é Thyago Augusto e estou cursando Engenharia de Software na UniCesumar.
+                Estou em constante aprendizado e aprimoramento para me tornar um Desenvolvedor Fullstack, 
+                busco oportunidades para colocar meus conhecimentos em prática tanto em equipe, quanto indivídual, visando grantir um ótimo nível de produtividade. 
+            </p> 
+            <div class="conteudo_links"> 
+                <h2 class="conteudo_links_subtitulo">Minhas redes sociais:</h2> 
+                <a href="https://github.com/thybiagio" class="conteudo_links_navegacao">Github</a>
+                <a href="https://www.linkedin.com/in/thyago-augusto-046a91257/" class="conteudo_links_navegacao">Linkedln</a>
+            </div>
+        </section> 
+        <img src="assets/imagem-thyago.jpeg" alt="Foto do Thyago" class="conteudo_imagem">
+    </main> 
+
+    <footer class="rodape"> 
+        <p>Desenvolvido por Thyago Augusto Correa Biagio Silva</p>
+    </footer> 
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

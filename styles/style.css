@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #F9F7F7;
+    --cor-secundaria: #3F72AF;
+    --cor-terciaria: #112D4E;
+    --cor-hover: #DBE2EF;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    color: var(--cor-secundaria);
+    background: var(--cor-primaria);
+}
+
+.navegacao {
+    padding: 4% 0%;
+}
+
+.navegacao_menu {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.navegacao_menu_link {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);
+}
+
+.menu_mobile_icone {
+    display: none;
+}
+
+.menu_mobile {
+    display: none;
+}
+
+.conteudo {
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.conteudo_apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.conteudo_apresentacao_titulo {
+    color: var(--cor-terciaria);
+    font-size: clamp(2rem, 2vw + 0.5rem, 6rem);
+    font-family: var(--fonte-primaria);
+}
+
+.conteudo_apresentacao_texto {
+    font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+    font-family: var(--fonte-secundaria);
+}
+
+.conteudo_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.conteudo_links_subtitulo {
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+}
+
+.conteudo_links_navegacao {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    padding: 21.5px 0;
+    width: 50%;
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.conteudo_links_navegacao:hover {
+    background-color: var(--cor-hover);
+}
+
+.conteudo_imagem {
+    width: 50%;
+    border: 2px solid #3F72AF;
+    border-radius: 20px;
+}
+
+.experiencia {
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.experiencia_conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 60%;
+}
+
+.experiencia_conteudo_titulo {
+    font-size: clamp(1rem, 2vw + 0.5rem, 6rem);
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+}
+
+.experiencia_conteudo_texto {
+    font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+    font-family: var(--fonte-secundaria);
+}
+
+.experiencia_imagem {
+    width: 40%; 
+    border-radius: 20px;
+	height: 700px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.contato {
+    padding: 5% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato_titulo {
+    font-size: clamp(2rem, 2vw + 0.5rem, 6rem);
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+}
+
+.contato_texto {
+    font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+    font-family: var(--fonte-secundaria);
+    padding: 5% 0;
+}
+
+#wpp_icon {
+    vertical-align: bottom;
+}
+
+iframe {
+    border: 2px solid #112D4E;
+    border-radius: 20px;
+}
+
+.rodape {
+    padding: 24px;
+    text-align: center;
+    background-color: var(--cor-terciaria);
+    font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+    font-weight: 400;
+    font-family: var(--fonte-secundaria);
+}
+
+@media (max-width: 1000px) {   
+    .navegacao_menu_link {
+        display: none;
+    }
+
+    .menu_mobile_icone {
+        display: block;
+    }
+
+    .menu_mobile_icone button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_mobile .navegacao_menu_link {
+        display: block;
+        padding: 2%;
+    }
+
+    .conteudo {
+        flex-direction: column-reverse;
+    }
+
+    .experiencia {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .conteudo_imagem,.experiencia_imagem {
+        width: 70%;
+    }
+    
+    .conteudo_links_navegacao {
+        padding: 21.5px 30px;
+    }
+
+    .contato_texto {
+        padding: 10% 0;;
+    }
+    
+    .open {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    iframe {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+
