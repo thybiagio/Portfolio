@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --cor-primaria: #F9F7F7;
-    --cor-secundaria: #3F72AF;
-    --cor-terciaria: #112D4E;
-    --cor-hover: #DBE2EF;
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #ffffff;
+    --cor-hover: #ffffff;
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
+
 body {
     box-sizing: border-box;
     color: var(--cor-secundaria);
     background: var(--cor-primaria);
+    background-image: url(../assets/BackPhoto.jpg);
+    background-size: 2700px;
 }
 
 .navegacao {
@@ -73,6 +76,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    color:#ffffff;
 }
 
 .conteudo_links_subtitulo {
@@ -90,18 +94,18 @@ body {
     border-radius: 8px;
     padding: 21.5px 0;
     width: 50%;
-    color: var(--cor-secundaria);
+    color:#ffffff;
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
 .conteudo_links_navegacao:hover {
-    background-color: var(--cor-hover);
+    background-color:#000000;
 }
 
 .conteudo_imagem {
     width: 50%;
-    border: 2px solid #3F72AF;
+    border: 2px solid #ffffff;
     border-radius: 20px;
 }
 
@@ -165,7 +169,7 @@ ul {
 }
 
 iframe {
-    border: 2px solid #112D4E;
+    border: 2px solid #ffffff;
     border-radius: 20px;
 }
 
@@ -185,12 +189,6 @@ iframe {
 
     .menu_mobile_icone {
         display: block;
-    }
-
-    .menu_mobile_icone button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
     }
 
     .menu_mobile {
@@ -213,12 +211,25 @@ iframe {
         gap: 40px;
     }
 
-    .conteudo_imagem,.experiencia_imagem {
-        width: 70%;
-    }
     
     .conteudo_links_navegacao {
         padding: 21.5px 30px;
+    }
+
+    a:link, a:visited { 
+        text-decoration: none;
+        color: var(--cor-secundaria);
+        font-family: var(--fonte-secundaria);
+    }
+    
+    .repo-link{ 
+        color: var(--cor-secundaria); 
+        font-family: var(--fonte-secundaria);
+    }
+
+    .repo-link:hover{ 
+        color: var(--cor-hover);
+        text-decoration: underline;
     }
 
     .contato_texto {
@@ -238,3 +249,6 @@ iframe {
 }
 
 
+    .rodape{ 
+        color: black;
+    }
