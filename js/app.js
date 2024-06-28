@@ -9,24 +9,37 @@ links.forEach(link => {
     });
 });
 
-function fetchGitHubRepos(thybiagio) {
-    fetch(`https://api.github.com/users/${thybiagio}/repos`)
-        .then(response => response.json())
-        .then(data => {
-            const repoList = document.getElementById('repo-list');
-            data.forEach(repo => {
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-                link.href = `https://${thybiagio}.github.io/${repo.name}`;
-                link.textContent = repo.name;
-                link.target = '_blank';
-                listItem.appendChild(link);
-                repoList.appendChild(listItem);
-            });
-        })
-        .catch(error => console.error('Erro:', error));
-}
+document.addEventListener('DOMContentLoaded', function (){ 
+    const projectContainer = document.querySelector(".content-main");
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetchGitHubRepos('thybiagio'); 
+    function getApiGitHub(){ 
+        fetch('https://api.github.com/users/thybiagio/starred')
+            .then(async res => { 
+                if(!res.ok){ 
+                    throw new Error('Erro ao buscar os dados da API do GitHub');
+                }
+                let data = await res.json(); 
+                data.forEach(item => { 
+                    let project = document.createElement('div');
+                    project.classList.add('project');
+
+                    project.innerHTML = `
+                        <div> 
+                            <h4 class="title">${item.name}</h4> 
+                        </div>
+                        <div>
+                        <a href="${item.html_url}" target="_blank">${item.html_url}</a>
+                        <span class"language"><span class="circle"></span>${item.language}</span>
+                        </div>
+                    `; 
+
+                    projectContainer.appendChild(project);
+                });
+            })
+            .catch(error => { 
+                console.error('Erro ao buscar a API do GitHub:', error); 
+            });
+    }
+
+    getApiGitHub();
 });

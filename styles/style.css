@@ -248,7 +248,45 @@ iframe {
     }
 }
 
-
     .rodape{ 
         color: black;
     }
+
+   
+    .projetos_titulo {
+        font-size: clamp(1rem, 2vw + 0.5rem, 6rem);
+        color: var(--cor-terciaria);
+        font-family: var(--fonte-primaria);
+        text-align: center;
+    }
+   
+    .content-main{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px;
+}
+.content-main .project {
+    width: 600px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    color: rgb(182, 182, 182); 
+    font-family: var(--fonte-secundaria);
+}
+.content-main .project div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 6px;
+    margin: 20px;
+}
+.content-main .project .title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: var(--fonte-secundaria); ;
+}
+
