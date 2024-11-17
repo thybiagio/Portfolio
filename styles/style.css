@@ -289,4 +289,30 @@ iframe {
     font-size: 1.2rem;
     font-family: var(--fonte-secundaria); ;
 }
+.projetos_lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.projetos_lista li {
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.projetos_lista a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.projetos_lista a:hover {
+    text-decoration: underline;
+}
+
+.projetos_lista p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+}
 
